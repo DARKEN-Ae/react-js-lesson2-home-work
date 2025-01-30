@@ -404,3 +404,66 @@
   background: rgba(239, 124, 0, 0.8);
   color: #fff;
 }
+
+.section-six h1 {
+  color: rgb(44, 45, 46);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.section-six span {
+  color: rgb(239, 124, 0);
+}
+.section-six .person-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1050px) {
+  .section-six .person-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.section-six .person-cards .person_card1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.section-six .person-cards .person_card1 h4 {
+  color: rgb(44, 45, 46);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.section-six .person-cards .person_card1 p {
+  color: rgb(145, 147, 153);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 13px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.section-six .person-cards .person_card1 span {
+  color: rgb(44, 45, 46);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 13px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.section-six .person-cards .person_card1 img {
+  border-radius: 50%;
+}

@@ -374,3 +374,61 @@
     }
   }
 }
+.section-six {
+  h1 {
+    color: rgba(44, 45, 46, 1);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  span {
+    color: rgb(239, 124, 0);
+  }
+  .person-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1050px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .person_card1 {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h4 {
+        color: rgba(44, 45, 46, 1);
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      p {
+        color: rgba(145, 147, 153, 1);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 13px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      span {
+        color: rgba(44, 45, 46, 1);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 13px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -18,6 +18,12 @@ import cardImg2 from "../components/assets/imgs/card2.png";
 import cardImg3 from "../components/assets/imgs/card3.png";
 import cardImg4 from "../components/assets/imgs/card4.png";
 import cardImg5 from "../components/assets/imgs/card5.png";
+import p1 from "../components/assets/imgs/p1.png";
+import p2 from "../components/assets/imgs/p2.png";
+import p3 from "../components/assets/imgs/p3.png";
+import p4 from "../components/assets/imgs/p4.png";
+import p5 from "../components/assets/imgs/p5.png";
+
 
 export class Home extends Component {
   render() {
@@ -126,6 +132,44 @@ export class Home extends Component {
              </div>
             </div>
            </div>
+          </div>
+        </div>
+        {/* 6 */}
+        <div className="section-six">
+          <div className="container">
+            <h1>Наша <span>команда</span></h1>
+            <div className="person-cards">
+              <div className="person_card1">
+                <img src={p1} alt="p1" />
+                <h4>Войнич Дарья</h4>
+                <p>Заместитель директора по продажам</p>
+                <span>+375 (17) 270-53-77 (317)</span>
+              </div>
+              <div className="person_card1">
+                <img src={p2} alt="p2" />
+                <h4>Войнич Дарья</h4>
+                <p>Заместитель директора по продажам</p>
+                <span>+375 (17) 270-53-77 (317)</span>
+              </div>
+              <div className="person_card1">
+                <img src={p3} alt="3" />
+                <h4>Войнич Дарья</h4>
+                <p>Заместитель директора по продажам</p>
+                <span>+375 (17) 270-53-77 (317)</span>
+              </div>
+              <div className="person_card1">
+                <img src={p4} alt="p4" />
+                <h4>Войнич Дарья</h4>
+                <p>Заместитель директора по продажам</p>
+                <span>+375 (17) 270-53-77 (317)</span>
+              </div>
+              <div className="person_card1">
+                <img src={p5} alt="p5" />
+                <h4>Войнич Дарья</h4>
+                <p>Заместитель директора по продажам</p>
+                <span>+375 (17) 270-53-77 (317)</span>
+              </div>
+            </div>
           </div>
         </div>
         <Footer/>
