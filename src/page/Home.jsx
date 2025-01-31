@@ -12,7 +12,7 @@ import Sertificat2 from "../components/assets/imgs/sertificat2.png";
 import Sertificat3 from "../components/assets/imgs/sertificat3.png";
 import Sertificat4 from "../components/assets/imgs/sertificat4.png";
 import Sertificat5 from "../components/assets/imgs/sertificat5.png";
-import NextPrevImg from "../components/assets/icon/nextButton.png";
+// import NextPrevImg from "../components/assets/icon/nextButton.png";
 import cardImg1 from "../components/assets/imgs/card1.png";
 import cardImg2 from "../components/assets/imgs/card2.png";
 import cardImg3 from "../components/assets/imgs/card3.png";
@@ -23,6 +23,27 @@ import p2 from "../components/assets/imgs/p2.png";
 import p3 from "../components/assets/imgs/p3.png";
 import p4 from "../components/assets/imgs/p4.png";
 import p5 from "../components/assets/imgs/p5.png";
+import NewsImg1 from "../components/assets/imgs/news1.png";
+import NewsImg2 from "../components/assets/imgs/news2.png";
+import NewsImg3 from "../components/assets/imgs/news3.png";
+import { FaArrowUp } from "react-icons/fa";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const certificates = [
+ Sertificat1,Sertificat2,Sertificat3,Sertificat4,Sertificat5
+];
+
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
 
 
 export class Home extends Component {
@@ -30,6 +51,9 @@ export class Home extends Component {
     return (
       <Fragment>
         <Header/>
+         <button className="back-to-top" onClick={scrollToTop}>
+      <FaArrowUp />
+    </button>
         {/* 1 */}
         <section className='home-section'>
           <div className="container">
@@ -70,27 +94,33 @@ export class Home extends Component {
           <div className="container">
             <h1>Качество продукции подтверждают <span>сертификаты</span></h1>
             <div className="carousel-images">
-              <div className="carousel-item">
-                <img src={Sertificat1} alt="Sertificat1" />
-              </div>
-              <div className="carousel-item">
-                <img src={Sertificat2} alt="Sertificat2" />
-              </div>
-              <div className="carousel-item">
-                <img src={Sertificat3} alt="Sertificat3" />
-              </div>
-              <div className="carousel-item">
-                <img src={Sertificat4} alt="Sertificat4" />
-              </div>
-              <div className="carousel-item">
-                <img src={Sertificat5} alt="Sertificat5" />
-              </div>
+              <div className="carousel-container">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={20}
+                slidesPerView={3}
+                navigation
+                pagination={{ clickable: true }}
+                loop={true}
+                breakpoints={{
+                  640: { slidesPerView: 1 },
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 3 }
+                }}
+              >
+                {certificates.map((src, index) => (
+                  <SwiperSlide key={index} className="slide">
+                    <img src={src} alt={`Certificate ${index + 1}`} className="carousel-image" />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
             </div>
           </div>
-           <div className="next-prev">
+           {/* <div className="next-prev">
             <img className='prev' src={NextPrevImg} alt="NextPrevImg" />
             <img className='next' src={NextPrevImg} alt="NextPrevImg" />
-          </div>
+          </div> */}
         </div>
         {/* 4 */}
         <div className="section-four">
@@ -170,6 +200,32 @@ export class Home extends Component {
                 <span>+375 (17) 270-53-77 (317)</span>
               </div>
             </div>
+          </div>
+        </div>
+        {/* 7 */}
+        <div className="section-seven">
+          <div className="container">
+            <h1>Новости</h1>
+           <div className="seven__cards">
+             <div className="news-cards">
+              <div className="news_card">
+                <img src={NewsImg1} alt="NewsImg1" />
+                <p className='Date-p'>28.01.2022</p>
+                <p className='lorem-p'>"ЛеанГрупп" серебряный призер EcoVadis!</p>
+              </div>
+               <div className="news_card">
+                <img src={NewsImg2} alt="NewsImg2" />
+                <p className='Date-p'>28.01.2022</p>
+                <p className='lorem-p'>"ЛеанГрупп" серебряный призер EcoVadis!</p>
+              </div>
+               <div className="news_card">
+                <img src={NewsImg3} alt="NewsImg3" />
+                <p className='Date-p'>28.01.2022</p>
+                <p className='lorem-p'>"ЛеанГрупп" серебряный призер EcoVadis!</p>
+              </div>
+            </div>
+              <button>Все новости</button>
+           </div>
           </div>
         </div>
         <Footer/>
